@@ -1,0 +1,15 @@
+{% extends "TiendaAnaRamona/base.html" %}
+
+{% block contenido %}
+<section>
+    <div>
+        <h1>Vestidos</h1>
+        <ul>
+        {% for vestido in vest %}
+            <li>{{ vestido.nombre }}, {{ vestido.talle }}, {{ vestido.color }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+<section>
+{% endblock contenido %}
+
