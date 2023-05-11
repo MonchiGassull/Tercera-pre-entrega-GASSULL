@@ -37,3 +37,13 @@ def lista_sombreros(request):
         context=contexto,
     )
     return http_response
+
+def hacer_pedido_vestido(request):
+    contexto = {}
+    http_response = render(
+        
+        request=request,
+        template_name="TiendaAnaRamona/formulario.html",
+        context=contexto,
+    )
+    return http_response

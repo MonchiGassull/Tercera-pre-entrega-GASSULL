@@ -5,6 +5,7 @@ from django.db import models
 class Malla(models.Model):
     nombre = models.CharField(max_length=256)
     precio = models.IntegerField()
+    color = models.CharField(max_length=256)
     talle = models.CharField(max_length=256)
     
     def __str__(self):
@@ -13,6 +14,7 @@ class Malla(models.Model):
 class Vestidos(models.Model):
     nombre = models.CharField(max_length=256)
     precio = models.IntegerField()
+    color = models.CharField(max_length=256)
     talle = models.CharField(max_length=256)
     
     def __str__(self):
@@ -21,6 +23,7 @@ class Vestidos(models.Model):
 class Sombreros(models.Model):
     nombre = models.CharField(max_length=256)
     precio = models.IntegerField()
+    color = models.CharField(max_length=256)
     talle = models.CharField(max_length=256)
     
     def __str__(self):

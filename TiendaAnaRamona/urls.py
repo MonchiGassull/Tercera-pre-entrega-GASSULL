@@ -17,10 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from proyecto_prentrega3.views import saludar, saludar_con_html
-from TiendaAnaRamona.views import lista_vestidos, lista_mallas, lista_sombreros
+from TiendaAnaRamona.views import lista_vestidos, lista_mallas, lista_sombreros, hacer_pedido_vestido
 
 urlpatterns = [
     path("lista-vestidos/", lista_vestidos, name="lista_vestidos"),
     path("lista-mallas/", lista_mallas, name="lista_mallas"),
     path("lista-sombreros/", lista_sombreros, name="lista_sombreros"),
+    path("pedido-vestido/", hacer_pedido_vestido, name="hacer_pedido_vestido"),
 ]

@@ -1,0 +1,14 @@
+{% extends "TiendaAnaRamona/base.html" %}
+
+{% block contenido %}
+<form action"{% url 'hacer_pedido_vestido' %}" method"post">
+    {% csrf_token %}
+    <p>Tipo de vestido</p>
+    <input type="text" name="nombre">
+    <p>Talle</p>
+    <input type="text" name="talle">
+    <p>Color</p>
+    <input type="text" name="color">
+    <input type="submit" value="Reservar">
+</form>
+{% endblock contenido %}
