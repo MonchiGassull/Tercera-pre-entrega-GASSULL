@@ -17,3 +17,12 @@ def saludar_con_html(request):
         context= contexto,
     )
     return http_response
+
+def inicio(request):
+    contexto = {}
+    http_response = render(
+        request=request,
+        template_name="TiendaAnaRamona/index.html",
+        context=contexto,
+    )
+    return http_response
