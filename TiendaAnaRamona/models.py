@@ -33,6 +33,9 @@ class Comprador(models.Model):
     telefono = models.CharField(max_length=256)
     direccion = models.TextField()
     
+    def __str__(self):
+        return f"{self.apellido}, {self.nombre}"
+    
 class Vendedor(models.Model):
     nombre = models.CharField(max_length=256)
     email=models.EmailField(max_length=256)
