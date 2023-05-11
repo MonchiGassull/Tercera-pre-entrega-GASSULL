@@ -43,9 +43,9 @@ def hacer_pedido_vestido(request):
     if request.method == "POST":
         data = request.POST
         nombre = data["nombre"]
-        talle = data["precio"]
         precio = data["talle"]
-        vestido = Vestidos(nombre=nombre, precio=precio, talle=talle)
+        talle = data["precio"]
+        vestido = Vestidos(nombre=nombre, talle=talle, precio=precio)
         vestido.save()
         
 

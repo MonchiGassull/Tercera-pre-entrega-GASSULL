@@ -1,14 +1,14 @@
 {% extends "TiendaAnaRamona/base.html" %}
 
 {% block contenido %}
-<form action"{% url 'hacer_pedido_vestido' %}" method"post">
+<form action="{% url 'hacer_pedido_vestido' %}" method="post">
     {% csrf_token %}
     <p>Tipo de vestido</p>
     <input type="text" name="nombre">
+    <p>Talle (nro de talle)</p>
+    <input type="text" name="talle">
     <p>Precio</p>
     <input type="number" name="precio">
-    <p>Talle</p>
-    <input type="text" name="talle">
     <input type="submit" value="Reservar">
 </form>
 {% endblock contenido %}
