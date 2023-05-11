@@ -7,7 +7,7 @@
         <a href="{% url 'hacer_pedido_vestido' %}">Reservar Vestido</a>
         <ul>
         {% for vestido in vest %}
-            <li>{{ vestido.nombre }}, {{ vestido.talle }}, {{ vestido.color }}</li>
+            <li>Tipo de Vestido: {{ vestido.nombre }} | Talle: {{ vestido.talle }} | Color: {{ vestido.color }}</li>
         {% endfor %}
         </ul>
     </div>
