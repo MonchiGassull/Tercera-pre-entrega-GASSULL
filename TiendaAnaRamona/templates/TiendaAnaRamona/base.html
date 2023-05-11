@@ -22,15 +22,13 @@
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="">Vestidos</a>
-                <a class="navbar-brand" href="#!">Mallas</a>
-                <a class="btn btn-primary" href="#signup">INICIAR</a>
+                <a class="navbar-brand" href="{% url 'inicio' %}">Inicio</a>
+                <a class="navbar-brand" href="{% url 'lista_vestidos' %}">Vestidos</a>
+                <a class="navbar-brand" href="{% url 'lista_mallas' %}">Mallas</a>
+                <a class="navbar-brand" href="{% url 'lista_sombreros' %}">Sombreros</a>
+                <a class="btn btn-primary" href="#signup">Buscador</a>
             </div>
         </nav>
-
-        <div style = "padding:30px 60px;">
-            Hola {{ nombre }}, Bienvenido a la Tienda Virtual de Ana Ramona
-        </div>
         
         <section style = "padding:20px 100px;">
             {% block contenido %}

@@ -23,5 +23,5 @@ urlpatterns = [
     path("saludo/<nombre>/", saludar),
     path('saludo_html/', saludar_con_html),
     path("ropa/", include("TiendaAnaRamona.urls")),
-    path("", inicio),
+    path("", inicio, name="inicio"),
 ]
