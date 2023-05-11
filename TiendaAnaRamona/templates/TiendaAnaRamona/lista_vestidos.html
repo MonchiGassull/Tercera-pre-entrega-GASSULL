@@ -4,6 +4,7 @@
 <section>
     <div>
         <h1>Vestidos</h1>
+        <a href="{% url 'hacer_pedido_vestido' %}">Reservar Vestido</a>
         <ul>
         {% for vestido in vest %}
             <li>{{ vestido.nombre }}, {{ vestido.talle }}, {{ vestido.precio }}</li>

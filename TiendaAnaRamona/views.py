@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.urls import reverse
 from TiendaAnaRamona.models import Malla, Sombreros, Vestidos, Comprador, Vendedor
 # Create your views here.
 
@@ -39,11 +40,20 @@ def lista_sombreros(request):
     return http_response
 
 def hacer_pedido_vestido(request):
-    contexto = {}
-    http_response = render(
+    if request.method == "POST":
+        data = request.POST
+        nombre = data["nombre"]
+        talle = data["precio"]
+        precio = data["talle"]
+        vestido = Vestidos(nombre=nombre, precio=precio, talle=talle)
+        vestido.save()
         
-        request=request,
-        template_name="TiendaAnaRamona/formulario.html",
-        context=contexto,
-    )
-    return http_response
+
+        url_exitosa = reverse('lista_vestidos')
+        return redirect(url_exitosa)
+    else:
+        http_response = render(
+            request=request,
+            template_name="TiendaAnaRamona/formulario.html",
+        )
+        return http_response

@@ -8,7 +8,7 @@ class Malla(models.Model):
     talle = models.CharField(max_length=256)
     
     def __str__(self):
-        return f"{self.nombre} | {self.talle} | ${self.precio}"
+        return f"{self.nombre} | {self.talle} | {self.precio}"
     
 class Vestidos(models.Model):
     nombre = models.CharField(max_length=256)
@@ -16,7 +16,7 @@ class Vestidos(models.Model):
     talle = models.CharField(max_length=256)
     
     def __str__(self):
-        return f"{self.nombre} | {self.talle} | ${self.precio}"
+        return f"{self.nombre} | {self.talle} | {self.precio}"
     
 class Sombreros(models.Model):
     nombre = models.CharField(max_length=256)
@@ -24,7 +24,7 @@ class Sombreros(models.Model):
     talle = models.CharField(max_length=256)
     
     def __str__(self):
-        return f"{self.nombre} | {self.talle} | ${self.precio}"
+        return f"{self.nombre} | {self.talle} | {self.precio}"
 
 class Comprador(models.Model):
     nombre = models.CharField(max_length=256)
