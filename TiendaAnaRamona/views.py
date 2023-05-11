@@ -1,15 +1,10 @@
 from django.shortcuts import render
-
+from TiendaAnaRamona.models import Malla, Sombreros, Vestidos, Comprador, Vendedor
 # Create your views here.
 
 def lista_vestidos(request):
     contexto = {
-        "vest" : [
-            {"nombre": "Largo", "talle": "S" , "color": "Negro"},
-            {"nombre": "Corto", "talle": "M" , "color": "Rojo"},
-            {"nombre": "Largo", "talle": "L" , "color": "Beige"},
-            {"nombre": "Corto", "talle": "XL" , "color": "Azul"},
-        ]
+        "vest" : Vestidos.objects.all()
     }
     http_response = render(
         
@@ -21,12 +16,7 @@ def lista_vestidos(request):
 
 def lista_mallas(request):
     contexto = {
-        "mall" : [
-            {"nombre": "Enteriza", "talle": "S" , "color": "Negro"},
-            {"nombre": "Enteriza", "talle": "M" , "color": "Rojo"},
-            {"nombre": "Tankini", "talle": "L" , "color": "Verde Manzana"},
-            {"nombre": "Tankini", "talle": "XL" , "color": "Azul"},
-        ]
+        "mall" : Malla.objects.all()
     }
     http_response = render(
         
@@ -38,12 +28,7 @@ def lista_mallas(request):
 
 def lista_sombreros(request):
     contexto = {
-        "somb" : [
-            {"nombre": "Capelina", "talle": "S" , "color": "Blanco"},
-            {"nombre": "Ala ancha", "talle": "M" , "color": "Beige"},
-            {"nombre": "Ala ancha", "talle": "L" , "color": "Verde Militar"},
-            {"nombre": "Capelina", "talle": "XL" , "color": "Azul"},
-        ]
+        "somb" : Sombreros.objects.all()
     }
     http_response = render(
         
