@@ -1,0 +1,14 @@
+{% extends "TiendaAnaRamona/base.html" %}
+
+{% block contenido %}
+<form action="{% url 'hacer_pedido_malla' %}" method="post">
+    {% csrf_token %}
+    <p>Estilo de malla</p>
+    <input type="text" name="nombre">
+    <p>Talle (nro de talle)</p>
+    <input type="text" name="talle">
+    <p>Precio</p>
+    <input type="number" name="precio">
+    <input type="submit" value="Reservar">
+</form>
+{% endblock contenido %}

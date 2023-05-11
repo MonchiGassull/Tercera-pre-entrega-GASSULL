@@ -57,3 +57,41 @@ def hacer_pedido_vestido(request):
             template_name="TiendaAnaRamona/formulario.html",
         )
         return http_response
+    
+def hacer_pedido_malla(request):
+    if request.method == "POST":
+        data = request.POST
+        nombre = data["nombre"]
+        precio = data["talle"]
+        talle = data["precio"]
+        malla = Malla(nombre=nombre, talle=talle, precio=precio)
+        malla.save()
+        
+
+        url_exitosa = reverse('lista_mallas')
+        return redirect(url_exitosa)
+    else:
+        http_response = render(
+            request=request,
+            template_name="TiendaAnaRamona/formulario_mallas.html",
+        )
+        return http_response
+    
+def hacer_pedido_sombrero(request):
+    if request.method == "POST":
+        data = request.POST
+        nombre = data["nombre"]
+        precio = data["talle"]
+        talle = data["precio"]
+        sombrero = Sombreros(nombre=nombre, talle=talle, precio=precio)
+        sombrero.save()
+        
+
+        url_exitosa = reverse('lista_sombreros')
+        return redirect(url_exitosa)
+    else:
+        http_response = render(
+            request=request,
+            template_name="TiendaAnaRamona/formulario_sombreros.html",
+        )
+        return http_response
