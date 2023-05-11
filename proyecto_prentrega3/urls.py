@@ -22,5 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("saludo/<nombre>/", saludar),
     path('saludo_html/', saludar_con_html),
-    path("vestidos/", include("TiendaAnaRamona.urls")),
+    path("ropa/", include("TiendaAnaRamona.urls")),
 ]

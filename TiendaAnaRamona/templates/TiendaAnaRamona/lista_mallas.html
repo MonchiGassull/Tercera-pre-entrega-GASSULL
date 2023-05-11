@@ -3,13 +3,12 @@
 {% block contenido %}
 <section>
     <div>
-        <h1>Vestidos</h1>
+        <h1>Mallas</h1>
         <ul>
-        {% for malla in vest %}
+        {% for malla in mall %}
             <li>{{ malla.nombre }}, {{ malla.talle }}, {{ malla.color }}</li>
         {% endfor %}
         </ul>
     </div>
 <section>
 {% endblock contenido %}
-

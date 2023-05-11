@@ -18,3 +18,21 @@ def lista_vestidos(request):
         context=contexto,
     )
     return http_response
+
+#cambiar a lista_mallas
+def lista_mallas(request):
+    contexto = {
+        "mall" : [
+            {"nombre": "Enteriza", "talle": "S" , "color": "Negro"},
+            {"nombre": "Enteriza", "talle": "M" , "color": "Rojo"},
+            {"nombre": "Tankini", "talle": "L" , "color": "Verde Manzana"},
+            {"nombre": "Tankini", "talle": "XL" , "color": "Azul"},
+        ]
+    }
+    http_response = render(
+        
+        request=request,
+        template_name="TiendaAnaRamona/lista_mallas.html",
+        context=contexto,
+    )
+    return http_response
