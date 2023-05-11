@@ -5,8 +5,8 @@
     <div>
         <h1>Vestidos</h1>
         <ul>
-        {% for malla in vest %}
-            <li>{{ malla.nombre }}, {{ malla.talle }}, {{ malla.color }}</li>
+        {% for vestido in vest %}
+            <li>{{ vestido.nombre }}, {{ vestido.talle }}, {{ vestido.precio }}</li>
         {% endfor %}
         </ul>
     </div>
