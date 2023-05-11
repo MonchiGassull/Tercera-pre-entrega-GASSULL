@@ -43,9 +43,9 @@ def hacer_pedido_vestido(request):
     if request.method == "POST":
         data = request.POST
         nombre = data["nombre"]
-        precio = data["talle"]
-        talle = data["precio"]
-        vestido = Vestidos(nombre=nombre, talle=talle, precio=precio)
+        color = data["color"]
+        talle = data["talle"]
+        vestido = Vestidos(nombre=nombre, talle=talle, color=color)
         vestido.save()
         
 
@@ -62,9 +62,9 @@ def hacer_pedido_malla(request):
     if request.method == "POST":
         data = request.POST
         nombre = data["nombre"]
-        precio = data["talle"]
-        talle = data["precio"]
-        malla = Malla(nombre=nombre, talle=talle, precio=precio)
+        color = data["color"]
+        talle = data["talle"]
+        malla = Malla(nombre=nombre, talle=talle, color=color)
         malla.save()
         
 
@@ -81,9 +81,9 @@ def hacer_pedido_sombrero(request):
     if request.method == "POST":
         data = request.POST
         nombre = data["nombre"]
-        precio = data["talle"]
-        talle = data["precio"]
-        sombrero = Sombreros(nombre=nombre, talle=talle, precio=precio)
+        color = data["color"]
+        talle = data["talle"]
+        sombrero = Sombreros(nombre=nombre, talle=talle, color=color)
         sombrero.save()
         
 

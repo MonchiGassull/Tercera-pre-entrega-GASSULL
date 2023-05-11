@@ -4,27 +4,27 @@ from django.db import models
 
 class Malla(models.Model):
     nombre = models.CharField(max_length=256)
-    precio = models.IntegerField()
+    color =  models.CharField(max_length=256)
     talle = models.CharField(max_length=256)
     
     def __str__(self):
-        return f"{self.nombre} | {self.talle} | {self.precio}"
+        return f"{self.nombre} | {self.talle} | {self.color}"
     
 class Vestidos(models.Model):
     nombre = models.CharField(max_length=256)
-    precio = models.IntegerField()
+    color =  models.CharField(max_length=256)
     talle = models.CharField(max_length=256)
     
     def __str__(self):
-        return f"{self.nombre} | {self.talle} | {self.precio}"
+        return f"{self.nombre} | {self.talle} | {self.color}"
     
 class Sombreros(models.Model):
     nombre = models.CharField(max_length=256)
-    precio = models.IntegerField()
+    color =  models.CharField(max_length=256)
     talle = models.CharField(max_length=256)
     
     def __str__(self):
-        return f"{self.nombre} | {self.talle} | {self.precio}"
+        return f"{self.nombre} | {self.talle} | {self.color}"
 
 class Comprador(models.Model):
     nombre = models.CharField(max_length=256)

@@ -7,7 +7,7 @@
         <a href="{% url 'hacer_pedido_sombrero' %}">Reservar Sombrero</a>
         <ul>
         {% for sombrero in somb %}
-            <li>{{ sombrero.nombre }}, {{ sombrero.talle }}, {{ sombrero.precio }}</li>
+            <li>{{ sombrero.nombre }}, {{ sombrero.talle }}, {{ sombrero.color }}</li>
         {% endfor %}
         </ul>
     </div>
