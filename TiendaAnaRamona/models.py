@@ -7,15 +7,24 @@ class Malla(models.Model):
     precio = models.IntegerField()
     talle = models.CharField(max_length=256)
     
+    def __str__(self):
+        return f"{self.nombre} | {self.talle} | ${self.precio}"
+    
 class Vestidos(models.Model):
     nombre = models.CharField(max_length=256)
     precio = models.IntegerField()
     talle = models.CharField(max_length=256)
     
+    def __str__(self):
+        return f"{self.nombre} | {self.talle} | ${self.precio}"
+    
 class Sombreros(models.Model):
     nombre = models.CharField(max_length=256)
     precio = models.IntegerField()
     talle = models.CharField(max_length=256)
+    
+    def __str__(self):
+        return f"{self.nombre} | {self.talle} | ${self.precio}"
 
 class Comprador(models.Model):
     nombre = models.CharField(max_length=256)
@@ -30,3 +39,6 @@ class Vendedor(models.Model):
     telefono = models.CharField(max_length=256)
     direccion = models.TextField()
     redes = models.CharField(max_length=256)
+    
+    def __str__(self):
+        return f"{self.nombre}"
