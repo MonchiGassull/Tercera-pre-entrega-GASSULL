@@ -19,7 +19,6 @@ def lista_vestidos(request):
     )
     return http_response
 
-#cambiar a lista_mallas
 def lista_mallas(request):
     contexto = {
         "mall" : [
@@ -33,6 +32,23 @@ def lista_mallas(request):
         
         request=request,
         template_name="TiendaAnaRamona/lista_mallas.html",
+        context=contexto,
+    )
+    return http_response
+
+def lista_sombreros(request):
+    contexto = {
+        "somb" : [
+            {"nombre": "Capelina", "talle": "S" , "color": "Blanco"},
+            {"nombre": "Ala ancha", "talle": "M" , "color": "Beige"},
+            {"nombre": "Ala ancha", "talle": "L" , "color": "Verde Militar"},
+            {"nombre": "Capelina", "talle": "XL" , "color": "Azul"},
+        ]
+    }
+    http_response = render(
+        
+        request=request,
+        template_name="TiendaAnaRamona/lista_sombreros.html",
         context=contexto,
     )
     return http_response
